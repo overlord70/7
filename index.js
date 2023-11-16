@@ -99,17 +99,17 @@ let categories = [
     {
         course: 'PROGRAMMING',
         count: 0,
-        arr_categories:[ ' '],
+        arr_categories:[],
     },
     {
         course: '     3DSMAX',
         count: 0,
-        arr_categories:[ ' ']
+        arr_categories:[]
     },
     {
         course: ' DIZAYN',
         count: 0,
-        arr_categories:[ ' ']
+        arr_categories:[]
     },
     {       
         course: '   BACKEND',
