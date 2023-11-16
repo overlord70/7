@@ -114,7 +114,7 @@ let categories = [
     {       
         course: '   BACKEND',
         count: 0,
-        arr_categories:[ ' ']
+        arr_categories:[]
     },
 ]
 for(let i = 0; i <= arr.length; i++){
