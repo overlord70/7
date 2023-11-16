@@ -1,57 +1,128 @@
-let people = [
+let arr = [
     {
-        name: "bobur",
-        age: 43,
-        isMarried: false,
-        wifes: ['kamila', 'safir', 'allayor']
+        id: Math.random(),
+        name: 'Timur',
+        info: {
+            school: '235',
+            faculity: 'SMM'
+        },
     },
     {
-        name: "ismail",
-        age: 12,
-        isMarried: true,
-        wifes: ['nikita', 'malika']
+        id: Math.random(),
+        name: 'Imran',
+        info: {
+            school: 'ne izvestno',
+            faculity: 'programming'
+        },
     },
     {
-        name: "allayor",
-        age: 14,
-        isMarried: true,
-        wifes: ['denis', 'dima', 'dimon', 'xbegim']
+        id: Math.random(),
+        name: 'Aminjon',
+        info: {
+            school: '444',
+            faculity: 'Dizayn'
+        },
     },
     {
-        name: "sarodr ml",
-        age: 18,
-        isMarried: false,
-        wifes: ['safiya']
+        id: Math.random(),
+        name: 'Maxmud',
+        info: {
+            school: '777',
+            faculity: '3dsmax'
+        },
     },
     {
-        name:'Tangir',
-        age: 15,
-        isMarried: true,
-        wifes: ['Marina', 'Safiya', 'Malika', 'Sarvara', 'Alisa']
+        id: Math.random(),
+        name: 'Muxammad',
+        info: {
+            school: '5555',
+            faculity: 'Backend'
+        },
     },
     {
-        name: 'Sardor st',
-        age: 17,
-        isMarried: false,
-        wifes:['Anisa']
-    }
-]
-let guilties = []
-let normal = []
-for(let i = 0; i < people.length; i++){
-    if(people[i].age < 18 && people[i].wifes.length > 1){
-        guilties.push(people[i].name , 
-                      people[i].age, 
-                      people[i].wifes, 
-                      people[i].isMarried)
-    } else if (people[i].age >= 18 && people[i].wifes.length === 1){
-        normal.push(people[i].name , 
-                    people[i].age,
-                    people[i].wifes,
-                    people[i].isMarried)
-    }
-}
-console.table(guilties)
-console.table(normal)
+        id: Math.random(),
+        name: 'Timur',
+        info: {
+            school: '235',
+            faculity: 'SMM'
+        },
+    },
+    {
+        id: Math.random(),
+        name: 'Imran',
+        info: {
+            school: 'ne izvestno',
+            faculity: 'programming'
+        },
+    },
+    {
+        id: Math.random(),
+        name: 'Aminjon',
+        info: {
+            school: '444',
+            faculity: 'Dizayn'
+        },
+    },
+    {
+        id: Math.random(),
+        name: 'Maxmud',
+        info: {
+            school: '777',
+            faculity: '3dsmax'
+        },
+    },
 
-//document.write (guilties ,normal)
+    {
+        id: Math.random(),
+        name: 'Maxmud',
+        info: {
+            school: '777',
+            faculity: '3dsmax'
+        },
+    },
+    {
+        id: Math.random(),
+        name: 'Muxammad',
+        info: {
+            school: '5555',
+            faculity: 'Backend'
+        },
+    },
+]
+
+let categories = [
+    {
+        course: ' SMM',
+        count: 0,
+        arr_categories:[]
+    },
+    {
+        course: 'PROGRAMMING',
+        count: 0,
+        arr_categories:[ ' '],
+    },
+    {
+        course: '     3DSMAX',
+        count: 0,
+        arr_categories:[ ' ']
+    },
+    {
+        course: ' DIZAYN',
+        count: 0,
+        arr_categories:[ ' ']
+    },
+    {       
+        course: '   BACKEND',
+        count: 0,
+        arr_categories:[ ' ']
+    },
+]
+for(let i = 0; i <= arr.length; i++){
+   for(let k = 0; k <= categories.length; k++){
+    if(arr[i].info.faculity.toUpperCase().trim() === categories[k].course.toUpperCase().trim()){
+        categories[k].count++
+        categories[k].arr_categories.push(arr[i].name)
+    }
+   }
+   
+}
