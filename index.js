@@ -125,8 +125,8 @@ for(let i = 0; i < arr.length; i++){
     }
    }
    
-}
-*/
+}*/
+
 let companies = [
     {
         id: Math.random(),
@@ -220,13 +220,22 @@ let companies = [
         expensesPerYear: [15000, 10000, 5000]
     }
 ]
+
+let minus = []
+let plus = []
+
 for(let item of companies){
     item.new_key = 0
+    item.id = Math.round(item.id)
     for(let num of item.expensesPerYear){
-     item.new_key = item.budget - ( (item.budget * item.tax / item.expensesPerYear.filter(item =>{
-        item + 100
-     })) / 12  ) 
-     console.log(item.name, num)
+       item.new_key += num / 12
     }
+    let tax_sum = item.tax * (item.budget / 12) /100
+    item.total = Math.round((item.budget / 12) - (item.new_key + tax_sum))
+   if(item.total > 0 ){
+    plus.push(item)
+   }else{
+    minus.push(item)
+   }
 }
-
+console.log(companies, minus, plus);
