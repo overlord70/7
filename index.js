@@ -1,112 +1,45 @@
-let companies = [
-    {
-        id: Math.random(),
-        name: "wepro",
-        tax: 12,
-        budget: 10000,
-        expensesPerYear: [4000, 2000, 3000] 
-    },
-    {
-        id: Math.random(),
-        name: 'Allayor',
-        tax: 12,
-        budget: 200,
-        expensesPerYear: [150, 300, 700]
-    },
-    {
-        id: Math.random(),
-        name: "Daler-Xrust",
-        tax: 10,
-        budget: 50000,
-        expensesPerYear: [12000, 20000, 5000]
-    },
-    {
-        id: Math.random(),
-        name: 'Luchshiy Productoviy',
-        tax: 20,
-        budget: 23000,
-        expensesPerYear: [2000, 1000, 5000]
-    },
-    {
-        id: Math.random(),
-        name: "dilrukh salon",
-        tax: 4,
-        budget: 32000,
-        expensesPerYear: [12000, 10000, 10000]
-    },
-    {
-        id: Math.random(),
-        name: "Necromantiya",
-        tax: 10,
-        budget: 30000,
-        expensesPerYear: [1200,3444,4666]
-    },
-    {
-        id:Math.random(),
-        name:'Artyomida.uz',
-        tax:15,
-        budget:100000,
-        expensesPerYear:[10000,3000,90000]
-    },
-    {
-        id: Math.random(),
-        name: "bmw",
-        tax: 13, 
-        budget: 13000, 
-        expensesPerYear: [3000, 4000, 1000]
-    },
-    {
-        id: Math.random(),
-        name: "dizayner",
-        tax: 12,
-        budget: 20000,
-        expensesPerYear: [1000, 100, 200]
-    },
-    {
-        id:Math.random(),
-        name: 'Amerika_cherez_mexika',
-        tax: 0,
-        budget: 15000,
-        expensesPerYear: [100,4000]
-    },
-    {
-        id: Math.random(),
-        name: 'Gradus MMM',
-        tax: 12,
-        budget: 250000,
-        expensesPerYear: [20000, 50000, 15000]
-    },
-    {
-        id:Math.random(),
-        name:"Tangir Company",
-        tax: 100,
-        budget: 1000000,
-        expensesPerYear: [10000,12000,20000]
-    },
-    {
-        id: Math.random(),
-        name: "film_for_adults",
-        tax: 75,
-        budget: 50000,
-        expensesPerYear: [15000, 10000, 5000]
+//1
+let your_age = prompt('How old are you?')
+function ask_age (age){
+    if(age >= 18){
+        alert('Welcome')
+    }else if(age === ''){
+        alert('Stupid')
+    } else{
+        alert('Get out of here')
     }
-]
-
-let minus = []
-let plus = []
-
-for(let item of companies){
-    item.new_key = 0
-    item.id = Math.round(item.id)
-    for(let num of item.expensesPerYear){
-       item.new_key += num / 12
-    }
-    let tax_sum = item.tax * (item.budget / 12) /100
-    item.total = Math.round((item.budget / 12) - (item.new_key + tax_sum))
-   if(item.total > 0 ){
-    plus.push(item)
-   }else{
-    minus.push(item)
-   }
 }
-console.log(companies, minus, plus);
+ask_age (your_age)
+//2
+function find_max_name(name, name_second, name_third){
+    if(name.length > name_second.length && name.length >name_third.length ){
+        alert('The biggest one ' + name)
+    } else if(name_second.length > name.length && name_second.length > name_third.length){
+        alert('The biggest one ' + name_second)
+    } else if(name_third.length > name_second.length && name_third.length > name.length){
+        alert('The biggest one ' + name_third)
+    }
+}
+find_max_name('Alex', 'George', 'Michael')
+//3
+let overal = +prompt('How many things did you send?')
+let ask = confirm('Is it procent?')
+if(ask === false){
+    let remainder = +prompt('How many things were broken?')
+    function find_x (a,b){
+    let overal_procent = 100
+    let x = a * overal_procent / b
+    alert(overal_procent + '%' + ' = ' + `${b}` )
+    alert(`${x}` + '%' + ' = ' + `${a}`)
+    }
+    find_x(remainder, overal)
+} else{
+    let remainder_procent = +prompt('How many procent of them was broken?')
+    function find_y (c,d){
+        let overal_procent = 100
+        let y = c * d / overal_procent
+        alert( overal_procent + '%' + ' = ' + `${c}`)
+            alert(`${d}` + ' %' + ' = ' + `${y}`)
+    }
+    find_y(overal, remainder_procent)
+}
