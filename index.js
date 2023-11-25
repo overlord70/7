@@ -21,7 +21,6 @@ const romains = (str) => {
     }
     return result
 }
-
 const number_arabic = (number) => {
     const map = {
         "I": 1,
@@ -32,7 +31,6 @@ const number_arabic = (number) => {
         "D": 500,
         "M": 1000
     }
-
     let roman = ''
     for (let i = 0; i< number.length; i++) {
         if (number >= pair[i]) {
@@ -44,7 +42,6 @@ const number_arabic = (number) => {
     }
     return roman
 }
-
 const your_num = ''
 const normal_num = romains(your_num)
 const result = number_arabic(normal_num)
