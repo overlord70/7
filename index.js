@@ -1,36 +1,52 @@
-let num = Math.random()
-function create_id (random_num){ 
-    let arr = prompt('Your name')
-     alert( `${arr.charAt().toUpperCase()}` + '-'+ random_num.toString().slice(5,10))
-    
+const romains = (str) => {
+    const map = {
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000
     }
-create_id(num)
+    let result = 0
+    let prev = 0
+    for(let i = str.length - 1; i>= 0; i--){
+        let curr = map[str[i]]
+        if(curr >= prev ){
+            result += curr
+        } else {
+            result-= curr
+        }
+        prev = curr
+    }
+    return result
+}
 
-// 2 
-function sortUsingForOf(inputArray) {
-    const sortedArray = [];
-  
-    for (const element of inputArray) {
-      if (sortedArray.length === 0) {
-        sortedArray.push(element);
-      } else {
-        let inserted = false;
-        for (let i = 0; i < sortedArray.length; i++) {
-          if (element < sortedArray[i]) {
-            sortedArray.splice(i, 0, element);
-            inserted = true;
-            break;
-          }
-        }
-        if (!inserted) {
-          sortedArray.push(element);
-        }
-      }
+const number_arabic = (number) => {
+    const map = {
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000
     }
-  
-    return sortedArray;
-  }
-  const unsortedArray = [3, 1, 5, 2, 4];
-  const sortedResult = sortUsingForOf(unsortedArray);
-  console.log(sortedResult); 
-  
+
+    let roman = ''
+    for (let i = 0; i< number.length; i++) {
+        if (number >= pair[i]) {
+            roman += pair[i]
+        }else{
+            number -= pair[i]
+        }
+        
+    }
+    return roman
+}
+
+const your_num = ''
+const normal_num = romains(your_num)
+const result = number_arabic(normal_num)
+console.log(`${your_num}  ${normal_num}`)
+console.log(`${result}`)
