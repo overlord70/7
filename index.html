@@ -3,10 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+      
+        .wrap{
+           margin: 0 auto;
+           width: 1200px;
+        }
+        .idea{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap: 25px;
+        }
+        .peace_1{
+            margin: 0 auto;
+           
+        }
+        .prosto{
+            padding-inline: 135px  135px;
+        }
+        .ziro{
+            font-size: 2000%;
+            
+        }
+        .peace_2{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        .teg_1{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            box-shadow: 2px 2px 3px black ;
+        }
+        .teg_2{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            box-shadow: 2px 2px 3px black ;
+        }
+        .teg_3{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            box-shadow: 2px 2px 3px black ;
+        }
+        .teg_4{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            box-shadow: 2px 2px 3px black ;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
-    
+<section class="timer">
+    <div class="wrap">
+       <div class="idea">
+        <div class="peace_1">
+            <div class="prosto">
+                <p class="ziro">0</p>
+            </div>
+        </div>
+        <div class="peace_2">
+            <button class="teg_1">⬆</button>
+            <button class="teg_2">🔄</button>
+            <button class="teg_3">🔢</button>
+            <button class="teg_4">⬇</button>
+        </div>
+       </div>
+    </div>
+</section>
     <script src="./index.js"></script>
 </body>
 </html>
