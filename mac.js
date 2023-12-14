@@ -6,7 +6,7 @@ let white = document.querySelector('.white')
 let h3 = document.querySelector('.h3')
 let btns = document.querySelectorAll('.one')
 console.log(white, h3, btns);
-SSD.onclick = () => {
+btn_grey.onclick = () => {
   mac_img.setAttribute('src', './img/mbp14-silver-select-202110 1.jpg')
   white.innerHTML = 'Space Gray'
   h3.innerHTML = '$2,599'
@@ -18,7 +18,7 @@ SSD.onclick = () => {
     GB_SSD.style.border = '1px solid skyblue'
 }
 let GB_SSD = document.querySelector('#GB_SSD')
-GB_SSD.onclick = () => {
+btn_white.onclick = () => {
     mac_img.setAttribute('src', './img/mbp14-spacegray-select-202110 1.jpg')
     white.innerHTML = 'White'
     h3.innerHTML = '$1,999'
