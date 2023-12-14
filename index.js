@@ -54,6 +54,7 @@ color_choose_2.onclick = () => {
     }
     color_choose_4.onmouseenter = () => {
       h3.innerHTML = 'Color - white titan'
+      h3.style.transition = '5s ease'
     }
     color_choose_4.onmouseleave = () => {
       h3.innerHTML = 'Color'
