@@ -1,602 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            img {
-                max-width: 100%;
-            }
-            .wrap {
-                position: relative;
-                width: 1200px;
-                margin: 0 auto;
-                
-            }
-            .iphone_1 {
-                margin-inline: 50px;
-            }
-            .header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            .inf {
-                margin-block: 50px 50px;
-                color: var(--r-globalnav-color);
-                text-decoration: none;
-            }
-            .flex {
-                padding: 10px 35px;
-                background: #f5f5f7;
-                border-radius: 4px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            .flex_small {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 15px;
-            }
-            .iphone_3 {
-                margin-block: 50px 50px;
-            }
-            .grid_1 {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            .block_1_grid_1 {
-                font-size: 17px;
-                line-height: 1.47059;
-                font-weight: 400;
-                letter-spacing: -0.022em;
-                font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
-                background-color: rgb(255, 255, 255);
-                color: rgb(29, 29, 31);
-                font-style: normal;
-            }
-            .block_1_grid_1 h1 {
-                font-size: 48px;
-                line-height: 1.08349;
-                font-weight: 600;
-                letter-spacing: -.003em;
-                font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                color: #1d1d1f;
-                padding-bottom: 15px;
-            }
-            .block_1_grid_1 h4 {
-                padding-bottom: 5px;
-                display: block;
-                color: #bf4800;
-            }
-
-            .btn {
-                font-size: 12px;
-                line-height: 1.33337;
-                font-weight: 400;
-                font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                display: flex;
-                color: #1d1d1f;
-                border-radius: 18px;
-                background-color: #f5f5f7;
-                padding: 12px 7px;
-                margin: 6px 0;
-                text-decoration: none;
-                cursor: pointer;
-            }
-            .btn_1 {
-                font-size: 12px;
-                line-height: 1.33337;
-                font-weight: 350;
-                font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                display: flex;
-                color: #1d1d1f;
-                border-radius: 18px;
-                background-color: #f5f5f7;
-                padding: 12px 7px;
-                margin-left: 45px;
-                text-decoration: none;
-                cursor: pointer;
-            }
-            .flex_end {
-                display: flex;
-                gap: 50px;
-            }
-            .photos{
-                position: relative;
-            }
-            .photos_img {
-                width: auto;
-                height: 50%;
-                display: block;
-                border-radius: 18px;
-                
-            }
-            .btr{
-                position: absolute;
-                right: 30px;
-                bottom: 650px;
-            }
-            .left{
-                position: absolute;
-                left: 30px;
-                bottom: 650px;
-            }
-            .right{
-                cursor: pointer;
-                border: none;
-                color: #656567;
-                border-radius: 90%;
-                font-size: 45px;
-                padding: 5px 15px 5px 15px;
-            }
-            .information {
-                margin-top: 150px;
-            }
-            .information h2 {
-                color: #1d1d1f;
-                font-size: 24px;
-                line-height: 1.16667;
-                font-weight: 600;
-                letter-spacing: 0.009em;
-                font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                margin-bottom: 25px;
-            }
-            .information span {
-                color: #86868b;
-                font-size: 24px;
-                line-height: 1.16667;
-                font-weight: 600;
-                letter-spacing: 0.009em;
-                font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-            }
-            .part_1 {
-                padding: 10px;
-                margin-bottom: 25px;
-                border: 1px solid black;
-                border-radius: 10px;
-                display: grid;
-                grid-template-columns: repeat(2,170px);
-                gap: 15px;
-                cursor: pointer;
-            }
-            .phone h3 {
-                font-size: 19px;
-                line-height: 1.23536;
-                font-weight: 400;
-                letter-spacing: -.022em;
-                font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-            }
-            .price {
-
-                font-size: 12px;
-                line-height: 1.33337;
-                font-weight: 400;
-                letter-spacing: -.01em;
-                font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                color: #656567;
-            }
-            .grey {
-                cursor: pointer;
-                text-align: left;
-                padding:10px 10px 10px 10px ;
-                border: 1px solid rgba(128, 128, 128, 0.606);
-                background-color: rgba(128, 128, 128, 0.606);
-                border-radius: 10px;
-                margin-bottom: 150px;
-            }
-            .information h2 {
-                font-size: 24px;
-                line-height: 1.16667;
-                font-weight: 600;
-                letter-spacing: 0.009em;
-                font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-            }
-            .information h3 {
-                margin-block:15px 25px ;
-            }
-            .color_choose_1{
-                padding: 20px 20px 20px 20px;
-                border-radius: 100%;
-                background-color: rgb(245, 238, 208);
-            }
-            .color_choose_2{
-                padding: 20px 20px 20px 20px;
-                border-radius: 100%;
-                background-color:rgb(37, 53, 88);
-            }
-            .color_choose_3{
-                padding: 20px 20px 20px 20px;
-                border-radius: 100%;
-                background-color:black ; 
-            }
-            .color_choose_4{
-                padding: 20px 20px 20px 20px;
-                border-radius: 100%;
-                background-color:white; 
-            }
-            .active{
-                transition: 5s ease-in-out;
-            }
-            .backround_black{
-                background-color: #1d1d1fdd;
-            }
-            
-        .text{
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        img{
+            max-width: 100%;
+        }
+        .wrap{
+            max-width: 1200px;
             margin: 0 auto;
-            max-width: 700px;
+            
+        }
+        .img{
             position: relative;
         }
-
-        .text p{
-          text-align: center;
-        }
-        .text a {
-            text-decoration: none;
-        }
-        .text h1{
-            padding-block:100px 10px ;
-            font-size: 40px;
-            text-align: center;
-        }
-        .btn_x{
+        .wheel_1{
             position: absolute;
-            left: 0;
-            top: 0;
+            left: 295px;
+            bottom: 125px;
         }
-        .x{
-            background: #e8e8ed;
-            border-radius: 50%;
-            color: #6e6e73;
-            padding: 10px 15px 10px 15px;
-            font-size: 20px;
-            cursor: pointer;
-            
+        .wheel_1 img{
+            max-width: 75%;
+            animation: spin .10s infinite;
         }
-       .grid_img_btn{
-        max-width: 50%;
-        margin-block: 20px 20px;
-        margin-left: 150px;
-        cursor: pointer;
-       }
-       .cost_and_information{
-        display: flex;
-        justify-content: space-between;
-        /* align-items: center; */
-        gap: 20px;
-       }
-    .modal{
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 120px;
-    }
+        .wheel_2{
+            position: absolute;
+            right: 280px;
+            bottom: 125px;
+        }
+        .wheel_2 img{
+            max-width: 75%;
+            animation: spin .10s infinite;
+        }
+        @keyframes spin {
+  from {
+    transform: rotate(0deg); 
+  }
+  to {
     
-        </style>
-        <title>Buy iPhone 15 Pro and iPhone 15 Pro Max - Apple</title>
-    </head>
-    <body>
-        <section class="iphone_1">
-            <div class="wrap">
-                <header class="header">
-                    <img src="./img/logo.png" alt="">
-                    <a class="inf" href="https://www.apple.com/us/shop/goto/store">Store</a>
-                    <a class="inf" href="./mac.html">Mac</a>
-                    <a class="inf" href="https://www.apple.com/ipad/">Ipad</a>
-                    <a class="inf" href="#">Iphone</a>
-                    <a class="inf" href="https://www.apple.com/watch/">Watch</a>
-                    <a class="inf" href="https://www.apple.com/apple-vision-pro/">Vision</a>
-                    <a class="inf" href="https://www.apple.com/airpods/">Airpods</a>
-                    <a class="inf" href="https://www.apple.com/tv-home/">Tv & Home</a>
-                    <a class="inf" href="https://www.apple.com/entertainment/">Entertaiment</a>
-                    <a class="inf" href="https://www.apple.com/us/shop/goto/buy_accessories">Accessories</a>
-                    <a class="inf" href="https://support.apple.com/?cid=gn-ols-home-hp-tab">Support</a>
-                    <img src="./img/search.png" alt="">
-                    <img src="./img/bag.png" alt="">
-                </header>
-            </div>
-        </section>
-        <section class="iphone_2">
-            <div class="wrap">
-                <div class="flex">
-                    <div class="flex_small">
+    transform: rotate(360deg); 
+  }
+}
+.btns{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.numbers{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.walk{
+    color: #707070;
+    font-family: Gilroy;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+.item{
+    color: #000;
+    font-family: Gilroy;
+    font-size: 64px;
+    font-weight: 700;
+    text-align: center;
+}
+.prikoli{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.flex_1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.up_and_down{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    row-gap: 1px;
+}
+.Tesla_2{
+    display: none;
+}
+.img_salon{
+    margin-bottom: 50px;
+}
+.black{
+    padding: 15px 15px 15px 15px;
+    border-radius: 50%;
+    background-color: #000;
+}
+.white{
+    padding: 15px 15px 15px 15px;
+    border-radius: 50%;
+    background-color: #fcf8f8;
+}
+.colour{
+    padding: 15px 15px 15px 15px;
+    border-radius: 50%;
+    background-color: rgb(168, 159, 149);
+}
+.last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+#p{
+    margin-bottom: 0;
+}
+.active{
+    transition: 10s ease-in-out;
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <section class="Tesla">
+        <div class="wrap">
+            <div class="body">
+                <div class="img">
+                    <img src="./img/tesla.jpeg" alt="">
+                    <div class="wheel_1">
+                        <img class="wheel" src="./img/hot-removebg-preview.png" alt="">
+                    </div>
+                    <div class="wheel_2">
+                        <img class="wheel" src="./img/hot-removebg-preview.png" alt="">
+                    </div>
+                </div>
+                <div class="btns">
+                    <div class="numbers">
                         <div>
-                            <p>Carrier Deals at Apple</p>
-                            <a class="ssilka" href="#">See all deals</a>
+                            <p class="walk">Запас хода</p>
+                            <p id="supply" class="item">750км</p>
+                        </div>
+                        <div>
+                            <p class="walk">Цена</p>
+                            <p class="item">$89, 990</p>
                         </div>
                     </div>
-                    <div class="flex_small">
-                        <img src="./img/globus-removebg-preview.png" alt="">
-                        <p>Pay as low as $0 after
-                            <br>
-                            trade-in. Δ
-                        </p>
-                    </div>
-                    <div class="flex_small">
-                        <img src="./img/t-removebg-preview.png" alt="">
-                        <p>Pay as low as $8.30/mo.
-                            <br>
-                            after trade-in.º</p>
-                    </div>
-                    <div class="flex_small">
-                        <img src="./img/tick-removebg-preview.png" alt="">
-                        <p>Pay as low as $4.69/mo.
-                            <br>
-                            after trade-in. Δ</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="iphone_3">
-            <div class="wrap">
-                <div class="grid_1">
-                    <div class="block_1_grid_1">
-                        <h4>New</h4>
-                        <h1>Buy iPhone 15 Pro</h1>
-                        <p>From $1199 or $49.95/mo.for 24 mo.
-                            <sup>*</sup>
-                        </p>
-                    </div>
-                    <div class="block_2_grid_1">
-                        <div class="buttons">
-                            <button class="btn_1">
-                                Get $40–$650 for your trade-in.
-                                <sup>◊◊</sup>
+                    <div class="prikoli">
+                        <div class="flex">
+                        <div>
+                        <p class="walk">Скорость автомобиля</p>
+                        <p id="hm" class="item">60 км/ч</p>
+                        </div>
+                        <div class="up_and_down">
+                            <button id="three" style="background: none; border: none;cursor: pointer;">
+                                <img src="./img/image 3.png" alt="">
                             </button>
-                            <button class="btn">
-                                Get 3% Daily Cash back with Apple Card.
+                            <button id="four" style="background: none; border: none;cursor: pointer;">
+                                <img src="./img/image 4.png" alt="">
                             </button>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="iphone_4">
-            <div class="wrap">
-                <div class="flex_end">
-                    <div class="photos">
-                            <img class="photos_img" src="./img/iphone-15-pro-model-unselect-gallery-1-202309.jpg" alt=""> 
-                       <div class="btr">
-                           <button class="right">></button>
-                       </div>
-                    </div>
-                    <div class="information">
-                        <h2>
-                            Model.
-                            <span>Which is best for you?</span>
-                        </h2>
-                        <div class="part_1">
-                            <div class="phone">
-                                <h3>iPhone 15 Pro</h3>
-                                <p>6.1-inch display¹</p>
+                        </div>
+                        <div class="flex_1">
+                            <div>
+                            <p class="walk">Температура за окнами</p>
+                            <p id="temperature" class="item">20°</p>
                             </div>
-                            <div class="price">
-                                <p>
-                                    From $999
-                                    <br>
-                                    or $41.62/mo.
-                                    <br>
-                                    24 mo.months
-                                    <sup>*</sup>
-                                </p>
+                            <div class="up_and_down">
+                                <button id="one" style="background: none; border: none;cursor: pointer;">
+                                    <img  src="./img/image 3.png" alt="">
+                                </button>
+                                <button id="two" style="background: none; border: none;cursor: pointer;">
+                                    <img src="./img/image 4.png" alt="">
+                                </button>
                             </div>
                         </div>
-                        <div class="part_1">
-                            <div class="phone">
-                                <h3>iPhone 15 Pro Max</h3>
-                                <p>6.7-inch display¹</p>
+                        <div class="flex">
+                            <div>
+                                <p class="walk">Диски</p>
+                                <p id="nineteen" class="item">19</p>
                             </div>
-                            <div class="price">
-                                <p>
-                                    From $1199
-                                    <br>
-                                    or $49.95/mo.
-                                    <br>
-                                    for 24 mo.
-                                    <sup>*</sup>
-                                </p>
+                            <div class="up_and_down">
+                                <button id="five" style="background: none; border: none;cursor: pointer;">
+                                    <img src="./img/image 3.png" alt="">
+                                </button>
+                                <button id="six" style="background: none; border: none;cursor: pointer;">
+                                    <img src="./img/image 4.png" alt="">
+                                </button>
                             </div>
                         </div>
-                        <div class="grey">
-                            <h3>Need help choosing a model?</h3>
-                            <p>Explore the differences in screen size and
-                                <br>
-                                battery life.</p>
+                        <div>
+                            <p id="air_conditioner" class="walk">Кондиционер</p>
+                            <div class="air">
+                                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
+                            <div class="form-check form-switch">
+                            <input id="tiggle" class="form-check-input" type="checkbox"  >
+                            </div>
+                            </div>
                         </div>
-                        <h2>Finish.
-                            <span>Pick your favorite.</span>
-                        </h2>
-                        <h3 class="h3">Color</h3>
-                        <div class="btns">
-                            <button class="color_choose_1"></button>
-                            <button class="color_choose_2"></button>
-                            <button class="color_choose_3"></button>
-                            <button class="color_choose_4"></button>
+                        <div>
+                            <p class="walk">
+                                Версия Long Range
+                            </p>
+                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
+                            <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox"  >
+                            </div>
+                        </div>
+                        <div>
+                            <p class="walk">Вид автомобиля</p>
+                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css."/>
+                            <div class="form-check form-switch">
+                            <input id="checked" class="form-check-input" type="checkbox" checked >
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-            <section class="modal">
-                <div class="wrap">
-                    <div class="background" style="background-color: rgba(0,0,0,0.5);">
-                            <div class="text" style="background-color: white;">
-                                <div class="btn_x">
-                                    <button class="x">x</button>
+        </div>
+                    </section>
+                   <section class="Tesla_2">
+                    <div class="wrap">
+                        <div class="salon">
+                            <img class="img_salon" src="./img/image 1.png" alt="">
+                            <div class="numbers">
+                                <div>
+                                    <p class="walk">Запас хода</p>
+                                    <p id="supply" class="item">750км</p>
                                 </div>
-                                <h1>Incredible carrier deals? <br>
-                                    We’ve got ‘em right here. 😎</h1>
-                                    <p>
-                                        When you buy your new iPhone from Apple, you can still get a sweet carrier deal. <br>
-                                         Just select your trade-in to see how much you can save. Have questions? No worries, <br>
-                                        <a href="#">our iPhone Specialists are here to help.</a>
-                                    </p>
-                                        <img class="grid_img_btn" src="./img/grid.png" alt="">
-                                        <div class="chance" style="display: flex; justify-content: space-between; align-items: center;   margin-inline: 50px 70px;">
-                                            <select style="margin: 0 auto; width: 400px; height: 50px; border-radius: 10px; " name="" id="">
-                                                <option value="">Iphone 13 Pro</option>
-                                                <option value="">iPhone 14 Pro Max</option>
-                                                <option value="">iPhone 14 Plus</option>
-                                                <option value="">Iphone 13 Pro Max</option>
-                                                <option value="">iPhone 14</option>
-                                                <option value="">iPhone 13</option>
-                                                <option value="">iPhone 13 mini</option>
-                                                <option value="">iPhone SE (3rd generation)</option>
-                                                <option value="">iPhone 12 Pro Max</option>
-                                                <option value="">iPhone 12 Pro</option>
-                                                <option value="">iPhone 12</option>
-                                                <option value="">iPhone SE (2nd generation)</option>
-                                                <option value="">iPhone 11 Pro</option>
-                                            </select>
-                                        </div>
-                                        <h2 class="text_h2" style="font-weight: 300; text-align: center; margin-block:50px 50px ;">For existing Verizon customers</h2>
-                                        <div class="iphone_grey_background" style="padding: 50px 50px;
-                                        background-color: #f5f5f7;">
-                                            <div class="click_p" style="display: flex; justify-content: space-between; align-items: center;">
-                                                <h2>iPhone 15 Pro</h2>
-                                                <p class="up_one" style="font-size: larger;">⬆</p>
-                                            </div>
-                                            <hr style = "color: black; margin-block:20px 20px;">
-                                            <div class="nav">
-                                                <div class="cost_and_information">
-                                                    <div>
-                                                        <h3>Cost</h3>
-                                                    </div>
-                                                    <div>
-                                                        <h3>
-                                                            iPhone 15 Pro
-                                                        </h3>
-                                                        <p style="font-weight: 300px; text-align: left; width: 230px;">
-                                                            On an Unlimited Ultimate,
-                                                             Unlimited Plus, One Unlimited, 5G 
-                                                              Get More, 5G Do More, or 5G Play 
-                                                               More rate plan
-                                                        </p>
-                                                        <h3 style="text-align: left; width: 150px; padding-block: 20px 5px;">
-                                                            From $4.69/mo.
-                                                            over 36 mo. after
-                                                            trade-in <sup>ΔΔ</sup> 
-                                                        </h3>
-                                                        <p style="color: #6e6e73; width: 280px; text-align: left;">Up to two monthly payments of $15.11 
-                                                             before Verizon bill credits begin.</p>
-                                                             <h3 style="text-align: left; padding-block: 20px 2px;">
-                                                                $544.00
-                                                             </h3>
-                                                             <p style="font-weight: 400; text-align: left; margin-bottom: 5px;">Total amount financed at 0% APR</p>
-                                                             <p style="font-weight: 300px; color: #6e6e73; text-align: left; width: 260px;">This is the total cost of your new iPhone after your instant trade-in credit has been applied. Does not include Verizon bill credits.</p>
-                                                    </div>
-                                                    <div>
-                                                        <h3>
-                                                            iPhone 15 Pro
-                                                        </h3>
-                                                        <p style="font-weight: 300px; text-align: left; width: 230px;">
-                                                            On an Unlimited Welcome, Welcome Unlimited, or 5G Start rate plan
-                                                        </p>
-                                                        <h3 style="text-align: left; width: 190px; padding-block: 20px 20px;">
-                                                            $14.41/mo.
-                                                            for 36 mo. after trade-in
-                                                        </h3>
-                                                        <h3>
-                                                            $519.00
-                                                        </h3>
-                                                        <p style="font-weight: 400; text-align: left; margin-bottom: 5px;">
-                                                            Total amount financed at 0% APR
-                                                        </p>
-                                                        <p style="font-weight: 300px; color: #6e6e73; text-align: left; width: 260px;">
-                                                            This is the total cost of your new iPhone after any applicable credits and discounts have been applied.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <hr style="margin-bottom: 30px 30px;">
-                                               <div class="credits" style="display: grid; grid-template-columns: repeat(2,1fr); margin-block: 20px 20px;">
-                                                <h3>Credits and <br> Discounts</h3>
-                                                <div >
-                                                    <h3>
-                                                        $999.00 footnote <sup>Δ</sup>
-                                                    </h3>
-                                                    <h4>Total bill credits for: iPhone 13 Pro</h4>
-                                                    <p style="color: #6e6e73; text-align: left;">Bill credits will be applied to your AT&T bill over 36 months and will begin within three bill cycles. If you have any questions about your billing, contact AT&T.</p>
-                                                </div>
-                                               </div>
-                                               <hr>
-                                               <div style="display: flex; justify-content: space-between;">
-                                                <h3>
-                                                    How to Get <br> this Deal
-                                                </h3>
-                                                <div>
-                                                    <p style="color: #6e6e73; text-align: left;">1. Trade in an eligible smartphone.</p>
-                                                    <p style="color: #6e6e73; width: 450px; text-align: left; ">2. Select AT&T Installment Plans as your monthly payment option — available to new and existing AT&T customers who want to upgrade or add a line.</p>
-                                                    <p style="color: #6e6e73; text-align: left;">3. Activate with an eligible AT&T rate plan.</p>
-                                                </div>
-                                               </div>
-                                               <hr> 
-                                            </div>
-                                           
-                                           <div class="block" style="margin-block: 20px 20px; display: flex; justify-content: space-between; align-items: center;">
-                                            <h2 style="text-align: left; ">iPhone 15 Pro Max</h2>
-                                            <p class="down">⬇</p>
-                                           </div>
-                                           <hr>
-                                           <div class="none" style="display: none;">
-                                            <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-                                                <h2>Cost</h2>
-                                                <div>
-                                                    <h3>
-                                                        iPhone 15 Pro Max
-                                                    </h3>
-                                                    <h3 style="margin-top: 15px;">
-                                                        From $5.53/mo. <br>
-                                                        over 36 mo. after trade-in <sup>Δ</sup>
-                                                    </h3>
-                                                    <p style="color: #6e6e73; margin-top: 5px;">Up to three monthly payments of $33.31 before AT&T bill credits begin.</p>
-                                                    <h3 style="margin-block: 10px 10px;">
-                                                        $1,199.00
-                                                    </h3>      
-                                                    <p style="font-weight: 500; text-align: left;">Total amount financed at 0% APR</p>
-                                                    <p style="color: #6e6e73; margin-block: 5px 20px; text-align: left;">This is the total cost of your new iPhone before AT&T bill credits.</p>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <div style="display: flex; justify-content: space-between;">
-                                                <h3 style="margin-block: 10px 10px;">Credits and <br>
-                                                     Discounts</h3>
-                                                     <div>
-                                                        <h3 style="margin-block: 10px 10px;">$1,000.00 <sup>Δ</sup></h3>
-                                                        <p style="text-align: left; font-weight: 500; margin-block: 0 5px;">Total bill credits for: iPhone 13 Pro</p>
-                                                        <p style="color: #6e6e73; margin-top: 5px; width: 450;">Bill credits will be applied to your AT&T bill over 36 months and will begin within three bill cycles. If you have any questions about your billing, contact AT&T.</p>
-                                                     </div>
-                                                </div>
-                                                <hr>
-                                                <div style="display: flex; justify-content: space-between;">
-                                                    <h3>
-                                                        How to Get <br> this Deal
-                                                    </h3>
-                                                    <div>
-                                                        <p style="color: #6e6e73; text-align: left;">1. Trade in an eligible smartphone.</p>
-                                                        <p style="color: #6e6e73; width: 450px; text-align: left; ">2. Select AT&T Installment Plans as your monthly payment option — available to new and existing AT&T customers who want to upgrade or add a line.</p>
-                                                        <p style="color: #6e6e73; text-align: left;">3. Activate with an eligible AT&T rate plan.</p>
-                                                    </div>
-                                                   </div>
-                                           </div>
-                                   </div>
-                                        </div>
+                                <div>
+                                    <p class="walk">Цена</p>
+                                    <p class="item">$89, 990</p>
+                                </div>
                             </div>
-                    </div>    
-            </section>
-        
-     
-        
-        <script src="./index.js"></script>
-    </body>
+                            <div class="last">
+                                <div class="colours_btns">
+                                    <button class="black"></button>
+                                    <button class="white"></button>
+                                    <button class="colour"></button>
+                                </div>
+                                <div>
+                                    <p id="p" class="walk">Вид автомобиля</p>
+                                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
+                                <div class="form-check form-switch">
+                                <input id="click" class="form-check-input" type="checkbox"  >
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   </section>
+    <script src="./index.js"></script>
+</body>
 </html>
-
-        
-
