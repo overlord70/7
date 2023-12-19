@@ -87,7 +87,7 @@ black.onclick = () => {
     img_salon.classList.add('active')
 }
 colour.onclick = () => {
-    img_salon.setAttribute('src', './img/image 8.png')
+    img_salon.setAttribute('src', './img/image 8 (1).png')
     img_salon.style.width = '500%'
     img_salon.classList.add('active')
 }
