@@ -13,248 +13,166 @@
             max-width: 100%;
         }
         .wrap{
-            max-width: 1200px;
             margin: 0 auto;
-            
+            max-width: 1200px;
         }
-        .img{
-            position: relative;
+        h1{
+            font-size: 46px;
+            margin: 0 0 10px 440px;
         }
-        .wheel_1{
-            position: absolute;
-            left: 295px;
-            bottom: 125px;
+        .results{
+            margin: 5px 0 10px 390px;
+            display: flex;
+            gap: 40px;
+            align-items: center;
         }
-        .wheel_1 img{
-            max-width: 75%;
-            animation: spin .10s infinite;
+        .form{
+            margin: 5px 0 10px 270px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
         }
-        .wheel_2{
-            position: absolute;
-            right: 280px;
-            bottom: 125px;
+        .inputs{
+            padding: 10px 20px 10px 20px;
         }
-        .wheel_2 img{
-            max-width: 75%;
-            animation: spin .10s infinite;
+        .inputs_imp{
+            padding: 10px 20px 10px 20px;
         }
-        @keyframes spin {
-  from {
-    transform: rotate(0deg); 
-  }
-  to {
-    
-    transform: rotate(360deg); 
-  }
-}
-.btns{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-}
-.numbers{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-.walk{
-    color: #707070;
-    font-family: Gilroy;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
-}
-.item{
-    color: #000;
-    font-family: Gilroy;
-    font-size: 64px;
-    font-weight: 700;
-    text-align: center;
-}
-.prikoli{
-    margin-top: 70px;
-    display: flex;
-    justify-content: space-between;
-}
-.flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-.flex_1{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-.up_and_down{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    row-gap: 1px;
-}
-.Tesla_2{
-    display: none;
-}
-.img_salon{
-    margin-bottom: 50px;
-}
-.black{
-    padding: 15px 15px 15px 15px;
-    border-radius: 50%;
-    background-color: #000;
-}
-.white{
-    padding: 15px 15px 15px 15px;
-    border-radius: 50%;
-    background-color: #fcf8f8;
-}
-.colour{
-    padding: 15px 15px 15px 15px;
-    border-radius: 50%;
-    background-color: rgb(168, 159, 149);
-}
-.last{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
-#p{
-    margin-bottom: 0;
-}
-.active{
-    transition: 10s ease-in-out;
-}
+        .important{
+            margin-block: 15px 15px;
+        }
+        .important h4 {
+            color: #4200FF;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .extra h4{
+            margin-block: 15px 15px;
+            color: #000;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .p{
+            color: var(--Grey-AAA, #595959);
+            font-family: Inter;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        button{
+            margin: 15px 0 10px 460px;
+            text-align: center;
+            width: 277px;
+            height: 59px;
+            flex-shrink: 0;
+            border-radius: 4px;
+            border: 2px solid #4200FF;
+            background: #4200FF;
+            color: #FFF;
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 400;
+        }
     </style>
     <title>Document</title>
 </head>
 <body>
-    <section class="Tesla">
+    <section class="exam">
         <div class="wrap">
-            <div class="body">
-                <div class="img">
-                    <img src="./img/tesla.jpeg" alt="">
-                    <div class="wheel_1">
-                        <img class="wheel" src="./img/hot-removebg-preview.png" alt="">
-                    </div>
-                    <div class="wheel_2">
-                        <img class="wheel" src="./img/hot-removebg-preview.png" alt="">
-                    </div>
+            <div class="text">
+                <h1>Example form</h1>
+                <div class="results">
+                    <p>All: 15</p>
+                    <p>Need: 12</p>
+                    <p >Success: <span class="correct">5</span>/12</p>
+                    <p >Error: <span class="mistake">0</span>/12</p>
                 </div>
-                <div class="btns">
-                    <div class="numbers">
-                        <div>
-                            <p class="walk">Запас хода</p>
-                            <p id="supply" class="item">750км</p>
-                        </div>
-                        <div>
-                            <p class="walk">Цена</p>
-                            <p class="item">$89, 990</p>
-                        </div>
+                <form class="form">
+                   <div class="display">
+                    <div class="important">
+                        <h4>Name</h4>
+                    <input class="inputs_imp" type="name"> <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16.5C12.4183 16.5 16 12.9183 16 8.5C16 4.08172 12.4183 0.5 8 0.5C3.58172 0.5 0 4.08172 0 8.5C0 12.9183 3.58172 16.5 8 16.5ZM6.83881 4.04547H9.16089L8.94854 10.6055H7.05116L6.83881 4.04547ZM9.20244 12.4336C9.19321 13.0984 8.63461 13.6339 8.00216 13.6339C7.33738 13.6339 6.79264 13.0984 6.80187 12.4336C6.79264 11.7781 7.33738 11.2472 8.00216 11.2472C8.63461 11.2472 9.19321 11.7781 9.20244 12.4336Z" fill="#EE0004"/>
+                      </svg>
+                    <p class="p">Need to fill</p>
                     </div>
-                    <div class="prikoli">
-                        <div class="flex">
-                        <div>
-                        <p class="walk">Скорость автомобиля</p>
-                        <p id="hm" class="item">60 км/ч</p>
-                        </div>
-                        <div class="up_and_down">
-                            <button id="three" style="background: none; border: none;cursor: pointer;">
-                                <img src="./img/image 3.png" alt="">
-                            </button>
-                            <button id="four" style="background: none; border: none;cursor: pointer;">
-                                <img src="./img/image 4.png" alt="">
-                            </button>
-                        </div>
-                        </div>
-                        <div class="flex_1">
-                            <div>
-                            <p class="walk">Температура за окнами</p>
-                            <p id="temperature" class="item">20°</p>
-                            </div>
-                            <div class="up_and_down">
-                                <button id="one" style="background: none; border: none;cursor: pointer;">
-                                    <img  src="./img/image 3.png" alt="">
-                                </button>
-                                <button id="two" style="background: none; border: none;cursor: pointer;">
-                                    <img src="./img/image 4.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-                        <div class="flex">
-                            <div>
-                                <p class="walk">Диски</p>
-                                <p id="nineteen" class="item">19</p>
-                            </div>
-                            <div class="up_and_down">
-                                <button id="five" style="background: none; border: none;cursor: pointer;">
-                                    <img src="./img/image 3.png" alt="">
-                                </button>
-                                <button id="six" style="background: none; border: none;cursor: pointer;">
-                                    <img src="./img/image 4.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-                        <div>
-                            <p id="air_conditioner" class="walk">Кондиционер</p>
-                            <div class="air">
-                                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
-                            <div class="form-check form-switch">
-                            <input id="tiggle" class="form-check-input" type="checkbox"  >
-                            </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="walk">
-                                Версия Long Range
-                            </p>
-                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
-                            <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox"  >
-                            </div>
-                        </div>
-                        <div>
-                            <p class="walk">Вид автомобиля</p>
-                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css."/>
-                            <div class="form-check form-switch">
-                            <input id="checked" class="form-check-input" type="checkbox" checked >
-                            </div>
-                        </div>
+                    <div class="extra">
+                        <h4>Surname</h4>
+                    <input class="inputs" type="name">
                     </div>
-                </div>
+                    <div class="important">
+                        <h4>Email adress</h4>
+                    <input class="inputs_imp" type="email"><svg style="display: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16.5C12.4183 16.5 16 12.9183 16 8.5C16 4.08172 12.4183 0.5 8 0.5C3.58172 0.5 0 4.08172 0 8.5C0 12.9183 3.58172 16.5 8 16.5ZM6.83881 4.04547H9.16089L8.94854 10.6055H7.05116L6.83881 4.04547ZM9.20244 12.4336C9.19321 13.0984 8.63461 13.6339 8.00216 13.6339C7.33738 13.6339 6.79264 13.0984 6.80187 12.4336C6.79264 11.7781 7.33738 11.2472 8.00216 11.2472C8.63461 11.2472 9.19321 11.7781 9.20244 12.4336Z" fill="#EE0004"/>
+                      </svg>
+                    <p class="p">Need to fill</p>
+                    </div>
+                    <div class="extra">
+                        <h4>Phone number</h4>
+                    <input class="inputs" type="phone">
+                    </div>
+                    <div class="extra">
+                        <h4>Your Mom’s name</h4>
+                    <input class="inputs" type="name">
+                    </div>
+                    <div class="extra">
+                        <h4>Your Pap’s name</h4>
+                    <input class="inputs" type="name">
+                    </div>
+                   </div>
+                   <div class="two">
+                    <div class="important">
+                        <h4>Age</h4>
+                    <input class="inputs_imp" type="name"> <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16.5C12.4183 16.5 16 12.9183 16 8.5C16 4.08172 12.4183 0.5 8 0.5C3.58172 0.5 0 4.08172 0 8.5C0 12.9183 3.58172 16.5 8 16.5ZM6.83881 4.04547H9.16089L8.94854 10.6055H7.05116L6.83881 4.04547ZM9.20244 12.4336C9.19321 13.0984 8.63461 13.6339 8.00216 13.6339C7.33738 13.6339 6.79264 13.0984 6.80187 12.4336C6.79264 11.7781 7.33738 11.2472 8.00216 11.2472C8.63461 11.2472 9.19321 11.7781 9.20244 12.4336Z" fill="#EE0004"/>
+                      </svg>
+                    <p class="p">Need to fill</p>
+                    </div>
+                    <div class="important">
+                        <h4>About you</h4>
+                    <input class="inputs_imp" type="name"> <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16.5C12.4183 16.5 16 12.9183 16 8.5C16 4.08172 12.4183 0.5 8 0.5C3.58172 0.5 0 4.08172 0 8.5C0 12.9183 3.58172 16.5 8 16.5ZM6.83881 4.04547H9.16089L8.94854 10.6055H7.05116L6.83881 4.04547ZM9.20244 12.4336C9.19321 13.0984 8.63461 13.6339 8.00216 13.6339C7.33738 13.6339 6.79264 13.0984 6.80187 12.4336C6.79264 11.7781 7.33738 11.2472 8.00216 11.2472C8.63461 11.2472 9.19321 11.7781 9.20244 12.4336Z" fill="#EE0004"/>
+                      </svg>
+                    <p class="p">Need to fill</p>
+                    </div>
+                    <div class="important">
+                        <h4>What is JavaScript?</h4>
+                    <input class="inputs_imp" type="name"> <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16.5C12.4183 16.5 16 12.9183 16 8.5C16 4.08172 12.4183 0.5 8 0.5C3.58172 0.5 0 4.08172 0 8.5C0 12.9183 3.58172 16.5 8 16.5ZM6.83881 4.04547H9.16089L8.94854 10.6055H7.05116L6.83881 4.04547ZM9.20244 12.4336C9.19321 13.0984 8.63461 13.6339 8.00216 13.6339C7.33738 13.6339 6.79264 13.0984 6.80187 12.4336C6.79264 11.7781 7.33738 11.2472 8.00216 11.2472C8.63461 11.2472 9.19321 11.7781 9.20244 12.4336Z" fill="#EE0004"/>
+                      </svg>
+                    <p class="p">Need to fill</p>
+                    </div>
+                    <div class="important">
+                        <h4>What is HTML?</h4>
+                    <input class="inputs_imp" type="name"> <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16.5C12.4183 16.5 16 12.9183 16 8.5C16 4.08172 12.4183 0.5 8 0.5C3.58172 0.5 0 4.08172 0 8.5C0 12.9183 3.58172 16.5 8 16.5ZM6.83881 4.04547H9.16089L8.94854 10.6055H7.05116L6.83881 4.04547ZM9.20244 12.4336C9.19321 13.0984 8.63461 13.6339 8.00216 13.6339C7.33738 13.6339 6.79264 13.0984 6.80187 12.4336C6.79264 11.7781 7.33738 11.2472 8.00216 11.2472C8.63461 11.2472 9.19321 11.7781 9.20244 12.4336Z" fill="#EE0004"/>
+                      </svg>
+                    <p class="p">Need to fill</p>
+                    </div>
+                    <div class="important">
+                        <h4>What is Css?</h4>
+                    <input class="inputs_imp" type="name"><svg style="display: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16.5C12.4183 16.5 16 12.9183 16 8.5C16 4.08172 12.4183 0.5 8 0.5C3.58172 0.5 0 4.08172 0 8.5C0 12.9183 3.58172 16.5 8 16.5ZM6.83881 4.04547H9.16089L8.94854 10.6055H7.05116L6.83881 4.04547ZM9.20244 12.4336C9.19321 13.0984 8.63461 13.6339 8.00216 13.6339C7.33738 13.6339 6.79264 13.0984 6.80187 12.4336C6.79264 11.7781 7.33738 11.2472 8.00216 11.2472C8.63461 11.2472 9.19321 11.7781 9.20244 12.4336Z" fill="#EE0004"/>
+                      </svg>
+                    <p class="p">Need to fill</p>
+                    </div>
+                    <div class="extra">
+                        <h4>Your favourite car</h4>
+                    <input class="inputs" type="name">
+                    </div>
+                   </div>
+                </form>
+                <button>Save changes</button>
             </div>
         </div>
-                    </section>
-                   <section class="Tesla_2">
-                    <div class="wrap">
-                        <div class="salon">
-                            <img class="img_salon" src="./img/image 1.png" alt="">
-                            <div class="numbers">
-                                <div>
-                                    <p class="walk">Запас хода</p>
-                                    <p id="supply" class="item">750км</p>
-                                </div>
-                                <div>
-                                    <p class="walk">Цена</p>
-                                    <p class="item">$89, 990</p>
-                                </div>
-                            </div>
-                            <div class="last">
-                                <div class="colours_btns">
-                                    <button class="black"></button>
-                                    <button class="white"></button>
-                                    <button class="colour"></button>
-                                </div>
-                                <div>
-                                    <p id="p" class="walk">Вид автомобиля</p>
-                                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
-                                <div class="form-check form-switch">
-                                <input id="click" class="form-check-input" type="checkbox"  >
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   </section>
+    </section>
+
     <script src="./index.js"></script>
 </body>
 </html>
