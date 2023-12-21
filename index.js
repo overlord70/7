@@ -20,8 +20,7 @@ btn.onclick = () => {
         item.style.border = '1px solid black'
         btn.style.backgroundColor = '#4200FF'
         btn.style.border = '#4200FF'
-        mistake.innerHTML--
-
+        correct.innerHTML++
     }
 })
 }
