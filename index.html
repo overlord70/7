@@ -4,20 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Real-time Chat</title>
+  <title>Document</title>
 </head>
 <body>
-  <div class="chat-container">
-    <div class="chat-header">
-      <h2>Chatting with John</h2>
+  <section>
+    <div class="wrap">
+      <h1>Example form</h1>
+      <div class="flex">
+        <p>All: 15</p>
+        <p>Need: 12</p>
+        <p>Success: <span id="two">5</span>/12</p>
+        <p>Error: <span id="one">7</span>/12</p>
+      </div>
+      <form>
+        <div class="flex_2">
+          <div>
+            <div class="important">
+              <h4>Name</h4>
+              <input class="word" type="text">
+              <p>Need to fill</p>
+            </div>
+            <div class="extra">
+              <h4>Surname</h4>
+              <input class="word" type="text">
+            </div>
+            <div class="important">
+              <h4>Email adress</h4>
+              <input class="email" type="email">
+              <p>Need to fill</p>
+            </div>
+            <div class="extra">
+              <h4>Phone number</h4>
+              <input class="number" type="text">
+            </div>
+            <div class="extra">
+              <h4 style="margin-top: 35px;">Your Mom’s name</h4>
+              <input class="word" type="text">
+            </div>
+            <div class="extra">
+              <h4 style="margin-top: 35px;">Your Pap’s name</h4>
+              <input class="word" type="text">
+            </div>
+          </div>
+          <div>
+            <div class="important">
+              <h4>Age</h4>
+              <input type="number">
+              <p>Need to fill</p>
+            </div>
+            <div class="important">
+              <h4>About You</h4>
+              <input class="word" type="text">
+              <p>Need to fill</p>
+            </div>
+            <div class="important">
+              <h4>What is JavaScript?</h4>
+              <input class="word" type="text">
+              <p>Need to fill</p>
+            </div>
+            <div class="important">
+              <h4>What is HTML?</h4>
+              <input class="word" type="text">
+              <p>Need to fill</p>
+            </div>
+            <div class="important">
+              <h4>What is CSS?</h4>
+              <input class="word" type="text">
+              <p>Need to fill</p>
+            </div>
+            <div class="extra">
+              <h4>Your favourite car</h4>
+              <input class="word" type="text">
+            </div>
+          </div>
+        </div>
+      </form>
+      <button>
+        Save changes
+      </button>
     </div>
-    <div class="chat-messages" id="chatMessages">
-    </div>
-    <div class="chat-input">
-      <input type="text" id="messageInput" placeholder="Type a message...">
-      <button id="sendMessageButton">Send</button>
-    </div>
-  </div>
-  <script src="index.js"></script>
+  </section>
+  <script src="./index.js"></script>
 </body>
 </html>

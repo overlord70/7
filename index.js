@@ -1,24 +1,41 @@
-document.getElementById('sendMessageButton').addEventListener('click', function() {
-    const messageInput = document.getElementById('messageInput');
-    const message = messageInput.value;
-    messageInput.value = '';
-    if (message.trim() !== '') {
-      const chatMessages = document.getElementById('chatMessages');
-      const messageElement = document.createElement('div');
-      messageElement.innerText = message;
-      messageElement.classList.add('sent-message');
-      chatMessages.appendChild(messageElement);
-      // Simulates receiving a message after a delay
-      simulateReceivedMessage();
+let inputs = document.querySelectorAll('.word')
+let btn = document.querySelector('button')
+let number = document.querySelector('.number')
+inputs.forEach(inp => {
+  inp.onkeyup = () => {
+    if(/^[a-z ,.'-]+$/i.test(inp.value) === true){
+      inp.style.border = '1px solid gray'
+      btn.style.background = '#4200FF'
+      btn.style.border = '2px solid #4200FF'
+    } else {
+      inp.style.border = '2px solid red'
+      btn.style.background = 'red'
+      btn.style.border = '2px solid red'
     }
-  });
-  
-  function simulateReceivedMessage() {
-    setTimeout(function() {
-      const chatMessages = document.getElementById('chatMessages');
-      const messageElement = document.createElement('div');
-      messageElement.innerText = 'Hi there! This is a received message.';
-      messageElement.classList.add('received-message');
-      chatMessages.appendChild(messageElement);
-    }, 1500);
   }
+})
+let important = document.querySelectorAll('.important input')
+btn.onclick = () => {
+  important.forEach(inp => {
+    if (inp.value === '') {
+      inp.style.border = '2px solid red'
+      btn.style.border = '2px solid red'
+      btn.style.background = 'red'
+    } else {
+      inp.style.border = '1px solid gray'
+      btn.style.border = '2px solid #4200FF'
+      btn.style.background = '#4200FF'
+    }
+  })
+}
+number.onkeyup = () => {
+  if(/^9989[012345789][0-9]{7}$/.test(number.value) === true){
+    number.style.border = '1px solid gray'
+      btn.style.background = '#4200FF'
+      btn.style.border = '2px solid #4200FF'
+   } else {
+    number.style.border = '2px solid red'
+      btn.style.background = 'red'
+      btn.style.border = '2px solid red'
+   }
+}
