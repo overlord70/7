@@ -72,3 +72,18 @@ button {
     text-align: center;
     font-size: 14px;
 }
+.error-field{
+    button{
+        border: 2px solid red;
+        background: red;
+    }
+    h4{
+        color: red;
+    }
+    p{
+        color: red;
+    }
+    input{
+        border: 2px solid red;
+    }
+}
